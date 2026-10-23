@@ -1,0 +1,325 @@
+{% extends "base.html" %}
+
+{% block title %}Medical Camps | MediCamp{% endblock %}
+
+{% block content %}
+
+<!-- ========================================
+     PAGE HEADER
+======================================== -->
+
+<section class="page-banner camps-banner">
+    <span class="eyebrow">EXPLORE HEALTHCARE</span>
+
+    <h1>Discover Medical Camps</h1>
+
+    <p>
+        Explore community healthcare programs, discover available services,
+        and find a medical camp that suits your needs.
+    </p>
+</section>
+
+
+<!-- ========================================
+     INTRODUCTION
+======================================== -->
+
+<section class="camps-intro">
+
+    <div>
+        <span class="eyebrow">YOUR HEALTH MATTERS</span>
+
+        <h2>Healthcare starts with awareness.</h2>
+
+        <p>
+            Medical camps help communities access health screenings,
+            preventive healthcare services, and general medical guidance.
+            Explore the sample camps below to learn more.
+        </p>
+    </div>
+
+    <div class="camps-count">
+        <span class="count-number">04</span>
+        <span class="count-label">Sample Medical Camps</span>
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     MEDICAL CAMP LISTINGS
+======================================== -->
+
+<section class="camps-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">FIND YOUR CAMP</span>
+            <h2>Available Medical Camps</h2>
+        </div>
+
+        <p>
+            Explore healthcare services offered by our sample camp listings.
+        </p>
+    </div>
+
+
+    <div class="camp-grid">
+
+
+        <!-- CAMP 1: GENERAL HEALTH -->
+
+        <article class="camp-card">
+
+            <div class="camp-image-wrapper">
+
+                <img
+                    src="{{ url_for('static', filename='images/general_checkup.webp') }}"
+                    class="camp-image"
+                    loading="lazy"
+                >
+
+                <span class="camp-category">General Healthcare</span>
+
+            </div>
+
+            <div class="camp-card-content">
+
+                <div class="camp-date">
+                    <span class="date-icon">▦</span>
+                    <span>Sample date to be announced</span>
+                </div>
+
+                <h3>General Health Checkup Camp</h3>
+
+                <p class="camp-description">
+                    A sample healthcare camp featuring general health
+                    screening and basic preventive healthcare awareness.
+                </p>
+
+                <div class="camp-details">
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">⌖</span>
+                        <span>Belagavi, Karnataka</span>
+                    </div>
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">♡</span>
+                        <span>General health screening</span>
+                    </div>
+
+                </div>
+
+                <a
+                    href="{{ url_for('register') }}?camp=General%20Health%20Checkup%20Camp"
+                    class="camp-button"
+                >
+                    Register for Camp <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CAMP 2: EYE CARE -->
+
+        <article class="camp-card">
+
+            <div class="camp-image-wrapper">
+
+                <img
+                    src="{{ url_for('static', filename='images/eye_checkup.jpeg') }}"
+                    class="camp-image"
+                    loading="lazy"
+                >
+
+                <span class="camp-category">Eye Care</span>
+
+            </div>
+
+            <div class="camp-card-content">
+
+                <div class="camp-date">
+                    <span class="date-icon">▦</span>
+                    <span>Sample date to be announced</span>
+                </div>
+
+                <h3>Eye Care Camp</h3>
+
+                <p class="camp-description">
+                    A sample eye health program focused on vision awareness,
+                    basic eye examinations, and eye care education.
+                </p>
+
+                <div class="camp-details">
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">⌖</span>
+                        <span>Dharwad, Karnataka</span>
+                    </div>
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">♡</span>
+                        <span>Vision screening</span>
+                    </div>
+
+                </div>
+
+                <a
+                    href="{{ url_for('register') }}?camp=Eye%20Care%20Camp"
+                    class="camp-button"
+                >
+                    Register for Camp <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CAMP 3: DIABETES AWARENESS -->
+
+        <article class="camp-card">
+
+            <div class="camp-image-wrapper">
+
+                <img
+                    src="{{ url_for('static', filename='images/bp.jpeg') }}"
+                    alt="Healthcare professional providing diabetes health education"
+                    class="camp-image"
+                    loading="lazy"
+                >
+
+                <span class="camp-category">Health Awareness</span>
+
+            </div>
+
+            <div class="camp-card-content">
+
+                <div class="camp-date">
+                    <span class="date-icon">▦</span>
+                    <span>Sample date to be announced</span>
+                </div>
+
+                <h3>Diabetes Awareness Camp</h3>
+
+                <p class="camp-description">
+                    A sample awareness program covering diabetes prevention,
+                    healthy lifestyle choices, and blood glucose screening.
+                </p>
+
+                <div class="camp-details">
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">⌖</span>
+                        <span>Hubballi, Karnataka</span>
+                    </div>
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">♡</span>
+                        <span>Diabetes awareness</span>
+                    </div>
+
+                </div>
+
+                <a
+                    href="{{ url_for('register') }}?camp=Diabetes%20Awareness%20Camp"
+                    class="camp-button"
+                >
+                    Register for Camp <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- CAMP 4: WOMEN'S HEALTH -->
+
+        <article class="camp-card">
+
+            <div class="camp-image-wrapper">
+
+                <img
+                    src="{{ url_for('static', filename='images/women_checkup.png') }}"
+                    alt="Healthcare professionals supporting community health"
+                    class="camp-image"
+                    loading="lazy"
+                >
+
+                <span class="camp-category">Women's Healthcare</span>
+
+            </div>
+
+            <div class="camp-card-content">
+
+                <div class="camp-date">
+                    <span class="date-icon">▦</span>
+                    <span>Sample date to be announced</span>
+                </div>
+
+                <h3>Women's Health Camp</h3>
+
+                <p class="camp-description">
+                    A sample healthcare awareness program highlighting
+                    preventive care and general women's health screening.
+                </p>
+
+                <div class="camp-details">
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">⌖</span>
+                        <span>Gadag, Karnataka</span>
+                    </div>
+
+                    <div class="camp-detail">
+                        <span class="detail-icon">♡</span>
+                        <span>Preventive healthcare</span>
+                    </div>
+
+                </div>
+
+                <a
+                    href="{{ url_for('register') }}?camp=Women%27s%20Health%20Camp"
+                    class="camp-button"
+                >
+                    Register for Camp <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     HEALTHCARE INFORMATION
+======================================== -->
+
+<section class="healthcare-cta">
+
+    <div class="cta-content">
+
+        <span class="eyebrow">TAKE THE NEXT STEP</span>
+
+        <h2>Your health deserves attention.</h2>
+
+        <p>
+            Explore the sample camps and proceed to the registration
+            page to submit your participant information.
+        </p>
+
+        <a href="{{ url_for('register') }}" class="btn btn-light">
+            Go to Registration →
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

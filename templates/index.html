@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Medical Camp Registration Portal{% endblock %}
+
+{% block content %}
+
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Medical Camp Registration Portal</h1>
+
+        <p>
+            Your health matters. Discover medical camps near you,
+            access healthcare services, and register for a camp today.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('camps') }}" class="btn-primary">
+                Explore Camps
+            </a>
+
+            <a href="{{ url_for('register') }}" class="btn-secondary">
+                Register Now
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="intro-section">
+    <span class="eyebrow">ABOUT THE PORTAL</span>
+    <h2>Healthcare access starts here.</h2>
+
+    <p>
+        The Medical Camp Registration Portal is a web-based application
+        designed to help people view medical camp information and register
+        for participation. It provides a straightforward user experience
+        for exploring camps and submitting registration details.
+    </p>
+</section>
+
+<section class="feature-section">
+    <article class="feature-card">
+        <div class="feature-icon">01</div>
+        <h3>Explore Camps</h3>
+        <p>View medical camp details, dates, locations, and available services.</p>
+    </article>
+
+    <article class="feature-card">
+        
+        <div class="feature-icon">02</div>
+        <h3>Easy Registration</h3>
+        <p>Submit your information through a simple registration process.</p>
+    </article>
+
+    <article class="feature-card">
+        <div class="feature-icon">03</div>
+        <h3>Stay Informed</h3>
+        <p>Find relevant information about community medical camps.</p>
+    </article>
+</section>
+
+<section class="cta-section">
+    <div>
+        <span class="eyebrow">GET STARTED</span>
+        <h2>Find a camp that's right for you.</h2>
+        <p>Explore the available medical camps and learn more about them.</p>
+    </div>
+
+    <a href="{{ url_for('camps') }}" class="btn btn-light">
+        View Camp Details →
+    </a>
+</section>
+
+{% endblock %}
+

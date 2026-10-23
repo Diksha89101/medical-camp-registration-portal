@@ -1,0 +1,1572 @@
+/* ========================================
+   MEDICAL CAMP REGISTRATION PORTAL
+   Global styles
+======================================== */
+
+:root {
+    --primary: #087f8c;
+    --primary-dark: #06616c;
+    --primary-light: #e8f6f6;
+    --navy: #142b3b;
+    --text: #526471;
+    --muted: #7b8993;
+    --background: #f7fafb;
+    --white: #ffffff;
+    --border: #e5ecef;
+    --shadow: 0 20px 60px rgba(20, 43, 59, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--navy);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 6%;
+    background: transparent;
+    box-shadow: none;
+    z-index: 1000;
+}
+
+.site-header .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 29px;
+    line-height: 1;
+}
+/* Navigation links on the right */
+.site-header .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    position: static;
+    transform: none;
+    background: transparent;
+}
+
+.site-header .navbar a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.site-header .navbar a:hover {
+    color: #a7f3d0;
+}
+/* Transparent top navigation bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+    box-shadow: none;
+    z-index: 1000;
+}
+
+/* Navigation links */
+.navbar a {
+    color: #ffffff;
+}
+
+/* Navigation hover effect */
+.navbar a:hover {
+    color: #a7f3d0;
+}
+
+/* ========================================
+   HOMEPAGE HERO
+======================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 8% 60px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../images/index.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    color: #ffffff;
+
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 17px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 23px;
+    font-size: clamp(38px, 4.2vw, 59px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-content>p {
+    max-width: 570px;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: var(--white);
+    border-color: var(--border);
+    color: var(--navy);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--primary-dark);
+}
+
+.btn-light:hover {
+    background: var(--primary-light);
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 29px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2aa879;
+}
+
+/* Homepage decorative medical card */
+
+.hero-visual {
+    position: relative;
+    min-width: 0;
+    padding: 25px;
+}
+
+.medical-card {
+    max-width: 390px;
+    margin: auto;
+    padding: 34px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.medical-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 39px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.medical-card h3 {
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.medical-card>p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.medical-divider {
+    height: 1px;
+    margin: 24px 0;
+    background: var(--border);
+}
+
+.medical-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 19px;
+}
+
+.medical-feature:last-child {
+    margin-bottom: 0;
+}
+
+.medical-feature>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.medical-feature strong,
+.medical-feature small {
+    display: block;
+}
+
+.medical-feature strong {
+    font-size: 13px;
+}
+
+.medical-feature small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.floating-badge {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 17px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.badge-icon {
+    color: #269a70;
+    font-size: 17px;
+}
+
+/* Homepage hero image */
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    height: 480px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 24px;
+    background: var(--primary-light);
+    box-shadow: var(--shadow);
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+    color: var(--white);
+    background: linear-gradient(to top,
+            rgba(10, 34, 45, 0.88),
+            rgba(10, 34, 45, 0.05) 75%);
+}
+
+.overlay-label {
+    margin-bottom: 12px;
+    color: #b8f1ec;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.image-overlay h3 {
+    margin-bottom: 12px;
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.image-overlay p {
+    color: #f0f7f8;
+    font-size: 13px;
+}
+
+/* ========================================
+   HOMEPAGE INTRODUCTION
+======================================== */
+
+.intro-section {
+    max-width: 850px;
+    margin: auto;
+    padding: 85px 25px 60px;
+    text-align: center;
+}
+
+.intro-section h2,
+.cta-section h2 {
+    margin-bottom: 16px;
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.3;
+    letter-spacing: -0.8px;
+}
+
+.intro-section p {
+    color: var(--text);
+    font-size: 15px;
+}
+
+/* Homepage feature cards */
+
+.feature-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding: 20px 9% 85px;
+}
+
+.feature-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+/* Homepage call to action */
+
+.cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 9% 80px;
+    padding: 42px;
+    border-radius: 18px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.cta-section .eyebrow {
+    color: #c5f2ef;
+}
+
+.cta-section h2 {
+    font-size: 28px;
+}
+
+.cta-section p {
+    color: #e1f4f5;
+    font-size: 13px;
+}
+
+.cta-section .btn {
+    flex-shrink: 0;
+}
+
+/* ========================================
+   SHARED INNER-PAGE STYLES
+======================================== */
+
+.page-banner {
+    padding: 75px 8%;
+    text-align: center;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+.page-banner h1 {
+    margin-bottom: 10px;
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.page-banner p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.placeholder-section {
+    max-width: 650px;
+    margin: 65px auto;
+    padding: 45px 25px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--white);
+}
+
+.placeholder-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    border-radius: 16px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 33px;
+}
+
+.placeholder-section h2 {
+    margin-bottom: 12px;
+}
+
+.placeholder-section p {
+    margin-bottom: 7px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.placeholder-section .btn {
+    margin-top: 22px;
+}
+
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-card {
+    max-width: 650px;
+    margin: 65px auto;
+    padding: 38px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.contact-card h2 {
+    margin-bottom: 12px;
+}
+
+.contact-card>p {
+    margin-bottom: 25px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.contact-item span {
+    color: var(--text);
+}
+
+.contact-card .btn {
+    margin-top: 22px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: #f3f7f8;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer p {
+    color: var(--text);
+    font-size: 12px;
+}
+
+.site-footer p:first-child {
+    margin-bottom: 4px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ========================================
+   REGISTRATION FORM
+======================================== */
+
+.registration-section {
+    padding: 60px 20px 80px;
+    background: var(--background);
+}
+
+.registration-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.registration-heading {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.registration-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    border-radius: 15px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 35px;
+}
+
+.registration-heading h2 {
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.registration-heading p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.registration-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    background: var(--white);
+    color: var(--navy);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa6ad;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    font-family: inherit;
+}
+
+.form-note {
+    margin-top: -10px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ========================================
+   MEDICAL CAMPS PAGE
+======================================== */
+
+.camps-banner {
+    padding: 75px 8%;
+    background:
+        radial-gradient(circle at 85% 20%,
+            rgba(8, 127, 140, 0.08),
+            transparent 35%),
+        var(--background);
+}
+
+.camps-banner p {
+    max-width: 650px;
+    margin: 12px auto 0;
+}
+
+.camps-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 65px 9% 40px;
+}
+
+.camps-intro>div:first-child {
+    max-width: 700px;
+}
+
+.camps-intro h2 {
+    margin-bottom: 12px;
+    font-size: clamp(26px, 3vw, 35px);
+    line-height: 1.3;
+    letter-spacing: -0.8px;
+}
+
+.camps-intro p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.camps-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 145px;
+    min-height: 125px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--primary-light);
+}
+
+.count-number {
+    color: var(--primary);
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.count-label {
+    margin-top: 8px;
+    color: var(--text);
+    font-size: 11px;
+    text-align: center;
+}
+
+.camps-section {
+    padding: 35px 9% 85px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.3;
+    letter-spacing: -0.8px;
+}
+
+.section-heading>p {
+    max-width: 360px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.camp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.camp-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 8px 30px rgba(20, 43, 59, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.camp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.camp-image-wrapper {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    background: var(--primary-light);
+}
+
+.camp-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.camp-card:hover .camp-image {
+    transform: scale(1.04);
+}
+
+.camp-category {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-dark);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.camp-card-content {
+    padding: 25px;
+}
+
+.camp-date {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 13px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.date-icon {
+    font-size: 18px;
+}
+
+.camp-card-content h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: -0.4px;
+}
+
+.camp-description {
+    min-height: 68px;
+    margin-bottom: 20px;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.camp-details {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-bottom: 22px;
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.camp-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.detail-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.camp-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 17px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.camp-button:hover {
+    background: var(--primary-dark);
+}
+
+.camp-button span {
+    font-size: 20px;
+}
+
+.healthcare-cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    margin: 0 9% 85px;
+    padding: 42px;
+    border-radius: 18px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.healthcare-cta .eyebrow {
+    color: #c5f2ef;
+}
+
+.healthcare-cta h2 {
+    margin-bottom: 14px;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.3;
+}
+
+.healthcare-cta p {
+    margin-bottom: 23px;
+    color: #e1f4f5;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.cta-symbol {
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.12);
+    font-size: 230px;
+    font-weight: 300;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 950px) {
+    .site-header {
+        padding: 18px 5%;
+    }
+
+    .navbar {
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+        gap: 35px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .feature-section {
+        padding-right: 7%;
+        padding-left: 7%;
+        gap: 15px;
+    }
+
+    .feature-card {
+        padding: 23px;
+    }
+
+    .camps-intro,
+    .camps-section {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    .camp-grid {
+        gap: 20px;
+    }
+
+    .camp-image-wrapper {
+        height: 210px;
+    }
+
+    .camp-card-content {
+        padding: 20px;
+    }
+
+    .healthcare-cta {
+        margin-right: 6%;
+        margin-left: 6%;
+    }
+}
+
+@media (max-width: 650px) {
+    .site-header {
+        flex-direction: column;
+        gap: 17px;
+        padding: 18px 15px;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 10px 19px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: -1.3px;
+    }
+
+    .hero-content>p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-visual {
+        padding: 10px 0 25px;
+    }
+
+    .medical-card {
+        padding: 26px;
+    }
+
+    .floating-badge {
+        right: -5px;
+        bottom: 0;
+        font-size: 11px;
+    }
+
+    .hero-image-container {
+        height: 380px;
+    }
+
+    .image-overlay {
+        padding: 24px;
+    }
+
+    .image-overlay h3 {
+        font-size: 25px;
+    }
+
+    .intro-section {
+        padding: 65px 7% 45px;
+    }
+
+    .feature-section {
+        grid-template-columns: 1fr;
+        padding: 10px 6% 60px;
+    }
+
+    .cta-section {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 6% 60px;
+        padding: 30px 23px;
+    }
+
+    .cta-section h2 {
+        font-size: 25px;
+    }
+
+    .page-banner {
+        padding: 55px 6%;
+    }
+
+    .placeholder-section,
+    .contact-card {
+        margin: 35px 6%;
+        padding: 28px 22px;
+    }
+
+    .registration-section {
+        padding: 35px 15px 55px;
+    }
+
+    .registration-card {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .registration-heading h2 {
+        font-size: 22px;
+    }
+
+    .camps-banner {
+        padding: 55px 6%;
+    }
+
+    .camps-intro {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 45px;
+    }
+
+    .camps-count {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .count-label {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .camps-section {
+        padding-top: 25px;
+        padding-bottom: 55px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .camp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .camp-image-wrapper {
+        height: 230px;
+    }
+
+    .camp-description {
+        min-height: auto;
+    }
+
+    .healthcare-cta {
+        margin-bottom: 55px;
+        padding: 30px 24px;
+    }
+
+    .cta-symbol {
+        right: 5px;
+        font-size: 160px;
+    }
+}
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+/* Homepage Hero Background */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/index.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Text in front of the background image */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 600px;
+    color: #92b8d3;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0d9488;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0f766e;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #0f766e;
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 75vh;
+        padding: 50px 6%;
+        background-position: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+        .site-header {
+            padding: 18px 5%;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    
+        .site-header .navbar {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 12px 18px;
+        }
+    
+        .hero {
+            min-height: 100vh;
+            padding: 150px 6% 50px;
+        }
+}
+/* Registration Success Page */
+.success-section {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 40px;
+    background: #f0fdf4;
+}
+
+.success-card {
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #16a34a;
+    color: white;
+    font-size: 40px;
+}
+
+.success-card h1 {
+    color: #166534;
+    margin-bottom: 15px;
+}
+
+.success-card p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.success-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.success-buttons a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+/* Admin Registrations Page */
+
+.admin-section {
+    min-height: 100vh;
+    padding: 130px 5% 60px;
+    box-sizing: border-box;
+    background: #f4f7fb;
+}
+
+.admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.admin-heading {
+    margin-bottom: 30px;
+}
+
+.admin-heading h1 {
+    color: #123b52;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.admin-heading p {
+    color: #64748b;
+}
+
+.registration-summary {
+    display: inline-block;
+    min-width: 180px;
+    padding: 22px 28px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.registration-summary h3 {
+    margin: 0 0 10px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.registration-summary p {
+    margin: 0;
+    color: #059669;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.registration-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.registration-table th,
+.registration-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.registration-table th {
+    background: #0f766e;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.registration-table td {
+    color: #334155;
+    font-size: 14px;
+}
+
+.registration-table tbody tr:hover {
+    background: #f0fdfa;
+}
+
+.empty-state {
+    padding: 45px 20px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.empty-state h3 {
+    color: #123b52;
+}
+
+.empty-state p {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.admin-back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #0f766e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.admin-back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .admin-section {
+        padding: 110px 15px 40px;
+    }
+
+    .admin-heading h1 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="success-section">
+    <div class="success-card">
+        <div class="success-icon">✓</div>
+
+    <h1>Registration Successful!</h1>
+
+    <p>Thank you, <strong>{{ full_name }}</strong>!</p>
+
+    <p>
+        Your registration for
+        <strong>{{ camp }}</strong>
+        has been received successfully.
+    </p>
+
+    <p>We look forward to seeing you at the medical camp.</p>
+
+    <div class="success-buttons">
+        <a href="{{ url_for('camps') }}" class="btn-primary">
+            Explore More Camps
+        </a>
+
+        <a href="{{ url_for('home') }}" class="btn-secondary">
+            Back to Home
+        </a>
+    </div>
+</div>
+
+
+</section>
+{% endblock %}

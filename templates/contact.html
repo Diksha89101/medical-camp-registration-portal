@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+
+{% block title %}Contact | MediCamp{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+    <span class="eyebrow">WE'RE HERE TO HELP</span>
+    <h1>Contact Us</h1>
+    <p>Find out more about the Medical Camp Registration Portal.</p>
+</section>
+
+<section class="contact-card">
+    <h2>Get in Touch</h2>
+    <p>
+        For information about a medical camp, contact the relevant
+        organizing healthcare provider.
+    </p>
+
+    <div class="contact-item">
+        <strong>Project</strong>
+        <span>Medical Camp Registration Portal</span>
+    </div>
+
+    <div class="contact-item">
+        <strong>Purpose</strong>
+        <span>Medical camp information and participant registration</span>
+    </div>
+
+    <a href="{{ url_for('home') }}" class="btn btn-primary">
+        Back to Home
+    </a>
+</section>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="admin-section">
+    <div class="admin-container">
+
+        <div class="admin-heading">
+            <h1>Medical Camp Registrations</h1>
+            <p>View participants registered for medical camps.</p>
+        </div>
+
+        <div class="registration-summary">
+            <h3>Total Registrations</h3>
+            <p>{{ registrations|length }}</p>
+        </div>
+
+        {% if registrations %}
+        <div class="table-wrapper">
+            <table class="registration-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Participant Name</th>
+                        <th>Age</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Medical Camp</th>
+                        <th>Address</th>
+                        <th>Registration Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for registration in registrations %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ registration.full_name }}</td>
+                        <td>{{ registration.age }}</td>
+                        <td>{{ registration.contact }}</td>
+                        <td>{{ registration.email or "—" }}</td>
+                        <td>{{ registration.camp }}</td>
+                        <td>{{ registration.address or "—" }}</td>
+                        <td>{{ registration.registered_at }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <h3>No registrations yet</h3>
+            <p>Participant registrations will appear here after submission.</p>
+            <a href="{{ url_for('register') }}" class="btn-primary">
+                Register a Participant
+            </a>
+        </div>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}" class="admin-back-link">
+            ← Back to Home
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}
+
